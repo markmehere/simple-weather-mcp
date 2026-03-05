@@ -24,7 +24,7 @@ A simple, cross-platform MCP server for weather and weather forecasts. Originate
   "simple-weather-mcp": {
     "args": [
       "--from",
-      "https://github.com/markmehere/simple-weather-mcp"
+      "git+https://github.com/markmehere/simple-weather-mcp.git",
       "simple-weather-mcp"
     ],
     "command": "uvx"

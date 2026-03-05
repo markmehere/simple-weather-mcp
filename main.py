@@ -1,5 +1,6 @@
 from typing import Any
 import httpx
+import json
 from mcp.server.fastmcp import FastMCP
 
 # Initialize FastMCP server
@@ -46,7 +47,7 @@ async def get_forecast_latlong(latitude: float, longitude: float) -> str:
     if not data:
         return "Unable to fetch detailed forecast."
 
-    return data
+    return json.dumps(data)
 
 
 
@@ -78,7 +79,7 @@ async def get_forecast(location: str) -> str:
     data = await get_weather(latitude, longitude)
     if not data:
         return "Unable to fetch detailed forecast."
-    return data
+    return json.dumps(data)
 
 
 @mcp.tool()
@@ -99,7 +100,7 @@ async def get_local_forecast() -> str:
         data = await get_weather(latitude, longitude)
         if not data:
             return "Unable to fetch detailed forecast."
-        return data
+        return json.dumps(data)
 
 
 def main():
