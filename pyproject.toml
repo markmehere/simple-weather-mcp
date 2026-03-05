@@ -13,8 +13,6 @@ authors = [
     { name = "Mark Pazolli", email = "52765023+markmehere@users.noreply.github.com" }
 ]
 license = { file = "LICENSE" }
-homepage = "https://github.com/markmehere/simple-weather-mcp"
-repository = "https://github.com/markmehere/simple-weather-mcp"
 keywords = ["weather", "mcp", "forecast", "geocoding", "api"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -22,10 +20,5 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[dependency-groups]
-dev = [
-    "ruff>=0.11.6",
-]
-
 [project.scripts]
-weather-mcp-server = "main:main"
+simple-weather-mcp = "main:main"
